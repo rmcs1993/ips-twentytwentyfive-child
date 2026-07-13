@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/inespinh/preview.inespinhosantos.pt/wp-content/themes/ips-twentytwentyfive-child/
     - /bin/mkdir -p $DEPLOYPATH
-    - /bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' ./ $DEPLOYPATH
+    - /usr/bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' ./ $DEPLOYPATH
