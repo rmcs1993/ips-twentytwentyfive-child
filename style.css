@@ -4,7 +4,7 @@ Theme URI: https://inespinhosantos.pt
 Author: Nutricionista Inês Pinho Santos
 Description: Child theme do Twenty Twenty-Five para o website da Nutricionista Inês Pinho Santos. Inclui header/footer globais alinhados com a identidade Leveza com Estrutura.
 Template: twentytwentyfive
-Version: 0.1.0
+Version: 0.1.1
 Requires at least: 6.7
 Tested up to: 7.0
 Text Domain: ips-twentytwentyfive-child
@@ -39,19 +39,34 @@ Text Domain: ips-twentytwentyfive-child
 
 .ips-site-header__inner {
   min-height: 82px;
-  max-width: 1320px;
+  max-width: 1500px;
   margin-inline: auto;
-  padding: 18px clamp(20px, 4vw, 56px);
+  padding: 14px clamp(20px, 3vw, 44px);
 }
 
-.ips-site-header .wp-block-site-logo img {
-  max-height: 58px;
-  width: auto;
+.ips-header-logo {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.ips-header-logo img {
+  display: block;
+  width: clamp(150px, 12vw, 190px);
+  height: auto;
+  max-height: 64px;
   object-fit: contain;
 }
 
+.ips-site-header__actions {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  margin-left: clamp(24px, 3vw, 48px);
+  gap: clamp(16px, 2vw, 28px);
+}
+
 .ips-site-header .wp-block-navigation {
-  font-size: clamp(0.94rem, 0.9vw, 1.02rem);
+  font-size: clamp(0.9rem, 0.82vw, 1rem);
   font-weight: 500;
 }
 
@@ -89,11 +104,12 @@ Text Domain: ips-twentytwentyfive-child
   background: var(--ips-primary);
   color: #ffffff;
   border-radius: var(--ips-radius-pill);
-  padding: 14px 28px;
+  padding: 14px 26px;
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
   box-shadow: none;
+  white-space: nowrap;
 }
 
 .ips-header-cta .wp-block-button__link:hover,
@@ -174,6 +190,21 @@ Text Domain: ips-twentytwentyfive-child
   outline-offset: 4px;
 }
 
+@media (max-width: 1100px) {
+  .ips-site-header__inner {
+    max-width: 100%;
+  }
+
+  .ips-site-header__actions {
+    margin-left: 20px;
+    gap: 16px;
+  }
+
+  .ips-site-header .wp-block-navigation {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 782px) {
   .admin-bar .ips-site-header {
     top: 46px;
@@ -181,11 +212,17 @@ Text Domain: ips-twentytwentyfive-child
 
   .ips-site-header__inner {
     min-height: 68px;
-    padding: 12px 18px;
+    padding: 10px 18px;
   }
 
-  .ips-site-header .wp-block-site-logo img {
-    max-height: 48px;
+  .ips-header-logo img {
+    width: 132px;
+    max-height: 50px;
+  }
+
+  .ips-site-header__actions {
+    margin-left: 16px;
+    gap: 10px;
   }
 
   .ips-header-cta .wp-block-button__link {
@@ -200,5 +237,9 @@ Text Domain: ips-twentytwentyfive-child
 @media (max-width: 600px) {
   .admin-bar .ips-site-header {
     top: 0;
+  }
+
+  .ips-header-cta {
+    display: none;
   }
 }
