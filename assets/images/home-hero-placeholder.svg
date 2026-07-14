@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Espaço reservado para fotografia principal</title>
+  <desc id="desc">Composição abstrata em tons suaves da identidade visual da marca.</desc>
+  <rect width="1200" height="900" rx="56" fill="#F4EEE8"/>
+  <path d="M740 80c210 0 380 170 380 380v360H420V460C420 250 530 80 740 80Z" fill="#E1E2DB"/>
+  <circle cx="880" cy="240" r="92" fill="#C39B7C" opacity=".48"/>
+  <circle cx="405" cy="710" r="145" fill="#D8D3CE" opacity=".72"/>
+  <path d="M365 770c54-150 126-265 220-345 82-70 172-111 270-123" fill="none" stroke="#AB7942" stroke-width="9" stroke-linecap="round" opacity=".72"/>
+  <path d="M505 565c-92-22-152-73-180-151 95-11 164 22 207 101M630 445c-20-93 2-169 67-228 50 76 49 154-2 235M735 360c40-83 101-132 184-148 5 91-35 157-121 198M465 652c-81 7-145 46-191 116 82 30 155 10 218-60" fill="none" stroke="#AB7942" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <path d="M610 720c30-124 42-216 35-276-8-67-38-118-90-153" fill="none" stroke="#0B0620" stroke-width="8" stroke-linecap="round" opacity=".22"/>
+  <path d="M548 298c58-53 126-74 204-64 72 9 126 44 161 106-54 12-108 7-162-15-63-26-131-35-203-27Z" fill="#C39B7C" opacity=".30"/>
+  <rect x="720" y="590" width="300" height="150" rx="34" fill="#F7F7F7" opacity=".72"/>
+  <rect x="760" y="635" width="220" height="14" rx="7" fill="#AB7942" opacity=".30"/>
+  <rect x="760" y="675" width="160" height="14" rx="7" fill="#0B0620" opacity=".14"/>
+</svg>
