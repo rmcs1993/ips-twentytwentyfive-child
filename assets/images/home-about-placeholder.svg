@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Espaço reservado para fotografia da Inês</title>
+  <desc id="desc">Composição abstrata vertical em tons suaves da identidade visual da marca.</desc>
+  <rect width="900" height="1050" rx="52" fill="#E1E2DB"/>
+  <path d="M450 115c178 0 322 144 322 322v506H128V437c0-178 144-322 322-322Z" fill="#F4EEE8"/>
+  <circle cx="585" cy="300" r="110" fill="#C39B7C" opacity=".48"/>
+  <path d="M355 765c32-158 48-274 48-349 0-83-22-149-66-198" fill="none" stroke="#0B0620" stroke-width="9" stroke-linecap="round" opacity=".18"/>
+  <path d="M278 800c68-177 155-307 262-390 90-69 188-108 294-117" fill="none" stroke="#AB7942" stroke-width="10" stroke-linecap="round" opacity=".70"/>
+  <path d="M421 594c-101-20-170-70-207-151 106-16 185 17 238 100M558 452c-21-103 8-187 87-252 49 86 43 171-17 257M676 366c48-88 116-136 205-144 0 99-49 167-146 205M372 690c-95 15-169 63-222 145 95 27 178 1 250-78" fill="none" stroke="#AB7942" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".70"/>
+  <rect x="150" y="862" width="600" height="88" rx="30" fill="#F7F7F7" opacity=".80"/>
+  <rect x="205" y="899" width="305" height="14" rx="7" fill="#AB7942" opacity=".32"/>
+</svg>
