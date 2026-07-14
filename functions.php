@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue dos estilos principais do child theme.
+ * Carrega os estilos principais do child theme no site e nos editores de blocos.
  */
 function ips_twentytwentyfive_child_enqueue_styles(): void {
 	wp_enqueue_style(
@@ -20,11 +20,11 @@ function ips_twentytwentyfive_child_enqueue_styles(): void {
 		wp_get_theme()->get( 'Version' )
 	);
 }
-add_action( 'wp_enqueue_scripts', 'ips_twentytwentyfive_child_enqueue_styles' );
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_styles' );
 
 /**
- * Carrega os estilos específicos da homepage tanto no site como no editor
- * Gutenberg/Site Editor. Todas as regras estão limitadas à classe .ips-home.
+ * Carrega os estilos específicos da homepage no site e no Gutenberg/Site Editor.
+ * Todas as regras estão limitadas à classe .ips-home.
  */
 function ips_twentytwentyfive_child_enqueue_home_assets(): void {
 	$relative_path = '/assets/css/home.css';
@@ -38,4 +38,4 @@ function ips_twentytwentyfive_child_enqueue_home_assets(): void {
 		$version
 	);
 }
-add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_home_assets' );
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_home_assets', 20 );
