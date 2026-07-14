@@ -4,7 +4,7 @@ Theme URI: https://inespinhosantos.pt
 Author: Nutricionista Inês Pinho Santos
 Description: Child theme do Twenty Twenty-Five para o website da Nutricionista Inês Pinho Santos. Inclui header/footer globais alinhados com a identidade Leveza com Estrutura.
 Template: twentytwentyfive
-Version: 0.1.1
+Version: 0.1.2
 Requires at least: 6.7
 Tested up to: 7.0
 Text Domain: ips-twentytwentyfive-child
@@ -99,8 +99,7 @@ Text Domain: ips-twentytwentyfive-child
   background: var(--ips-background-warm);
 }
 
-.ips-header-cta .wp-block-button__link,
-.ips-footer-cta .wp-block-button__link {
+.ips-header-cta .wp-block-button__link {
   background: var(--ips-primary);
   color: #ffffff;
   border-radius: var(--ips-radius-pill);
@@ -113,14 +112,12 @@ Text Domain: ips-twentytwentyfive-child
 }
 
 .ips-header-cta .wp-block-button__link:hover,
-.ips-header-cta .wp-block-button__link:focus-visible,
-.ips-footer-cta .wp-block-button__link:hover,
-.ips-footer-cta .wp-block-button__link:focus-visible {
+.ips-header-cta .wp-block-button__link:focus-visible {
   background: var(--ips-primary-dark);
   color: #ffffff;
 }
 
-/* Footer global */
+/* Footer compacto */
 .ips-site-footer {
   background: var(--ips-background-warm);
   color: var(--ips-foreground);
@@ -128,57 +125,107 @@ Text Domain: ips-twentytwentyfive-child
 }
 
 .ips-site-footer__inner {
-  max-width: 880px;
+  max-width: 1100px;
   margin-inline: auto;
-  padding: clamp(54px, 7vw, 86px) 24px clamp(32px, 5vw, 52px);
+  padding: 20px 24px 18px;
   text-align: center;
 }
 
-.ips-site-footer h2,
-.ips-site-footer h3,
-.ips-site-footer p {
-  margin-top: 0;
+.ips-footer-compact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
 }
 
-.ips-site-footer__brand {
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
-  line-height: 1.15;
-  color: var(--ips-primary-dark);
-  margin-bottom: 10px;
+.ips-footer-identity,
+.ips-footer-legal {
+  margin: 0;
+  line-height: 1.45;
 }
 
-.ips-site-footer__tagline {
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
-  margin-bottom: 34px;
-}
-
-.ips-site-footer__section-title {
-  color: var(--ips-primary-dark);
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.ips-site-footer a {
-  color: var(--ips-foreground);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-.ips-site-footer a:hover,
-.ips-site-footer a:focus-visible {
-  color: var(--ips-primary-dark);
-}
-
-.ips-footer-links {
-  gap: 8px 12px;
-}
-
-.ips-footer-meta {
-  border-top: 1px solid rgba(216, 211, 206, 0.9);
-  margin-top: 34px;
-  padding-top: 24px;
+.ips-footer-identity {
   font-size: 0.92rem;
-  color: rgba(11, 6, 32, 0.78);
+  color: var(--ips-foreground);
+}
+
+.ips-footer-identity strong {
+  font-weight: 650;
+}
+
+.ips-footer-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.ips-footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(171, 121, 66, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+  color: var(--ips-foreground);
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.ips-footer-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ips-footer-icon .ips-icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.ips-footer-icon:hover,
+.ips-footer-icon:focus-visible {
+  background: var(--ips-primary-dark);
+  border-color: var(--ips-primary-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ips-footer-affiliate {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ips-footer-affiliate-label {
+  font-size: 0.68rem;
+  line-height: 1;
+  color: rgba(11, 6, 32, 0.68);
+}
+
+.ips-footer-legal {
+  font-size: 0.82rem;
+  color: rgba(11, 6, 32, 0.74);
+}
+
+.ips-footer-legal a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.ips-footer-legal a:hover,
+.ips-footer-legal a:focus-visible {
+  color: var(--ips-primary-dark);
 }
 
 /* Acessibilidade */
@@ -230,7 +277,11 @@ Text Domain: ips-twentytwentyfive-child
   }
 
   .ips-site-footer__inner {
-    padding-inline: 20px;
+    padding: 18px 18px 16px;
+  }
+
+  .ips-footer-compact {
+    gap: 10px 18px;
   }
 }
 
@@ -241,5 +292,10 @@ Text Domain: ips-twentytwentyfive-child
 
   .ips-header-cta {
     display: none;
+  }
+
+  .ips-footer-identity,
+  .ips-footer-legal {
+    flex-basis: 100%;
   }
 }
