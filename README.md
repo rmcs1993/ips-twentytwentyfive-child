@@ -4,7 +4,7 @@ Child theme para o website da **Nutricionista Inês Pinho Santos**, baseado no t
 
 ## Objetivo
 
-Este tema contém a primeira versão do header e footer globais do site principal, alinhados com a marca:
+Este tema contém os elementos globais e páginas editáveis do site principal, alinhados com a marca:
 
 - **Nutricionista Inês Pinho Santos**
 - **Leveza com Estrutura**
@@ -18,8 +18,45 @@ functions.php
 theme.json
 parts/header.html
 parts/footer.html
+templates/front-page.html
+patterns/leveza-com-estrutura.php
+patterns/termos-e-condicoes.php
+patterns/politica-de-privacidade.php
+assets/css/home.css
+assets/css/leveza-app.css
 .cpanel.yml
 ```
+
+## Padrões Gutenberg — Leveza com Estrutura
+
+O tema disponibiliza três padrões editáveis:
+
+1. **Leveza com Estrutura — Porta de entrada da app**
+2. **Leveza com Estrutura — Termos e Condições**
+3. **Leveza com Estrutura — Política de Privacidade**
+
+### Como utilizar
+
+No WordPress:
+
+1. criar uma página nova;
+2. abrir o inseridor de blocos;
+3. escolher **Padrões**;
+4. pesquisar por “Leveza com Estrutura”;
+5. inserir o padrão correspondente;
+6. guardar a página com o endereço pretendido.
+
+Endereços recomendados:
+
+- `/leveza-com-estrutura/`
+- `/termos-e-condicoes/`
+- `/politica-de-privacidade/`
+
+Depois de inserido, cada padrão passa a ser conteúdo normal da página e pode ser alterado diretamente no Gutenberg.
+
+O botão **Entrar na plataforma** encaminha para:
+
+`https://leveza-estruturada-app.lovable.app`
 
 ## Header
 
@@ -31,7 +68,7 @@ Menu previsto:
 - Acompanhamento → `/acompanhamento/`
 - Gerador de Ementas → `https://gerador.inespinhosantos.pt`
 - Contactos → `/contactos/`
-- Marcar Consulta → `/` temporariamente
+- Marcar Consulta → `/contactos/`
 
 Dropdown **Espaço**:
 
@@ -41,22 +78,9 @@ Dropdown **Espaço**:
 - Osteopatia → `https://espaco.inespinhosantos.pt/servicos/osteopatia/`
 - Massagens → `https://espaco.inespinhosantos.pt/servicos/massagem/`
 
-Não incluir nesta fase:
-
-- Yoga
-- Fisioterapia
-
 ## Footer
 
-Footer minimalista com:
-
-- assinatura da marca;
-- contactos;
-- redes sociais;
-- Google reviews;
-- Loja Amazon com indicação de link afiliado;
-- botão Marcar Consulta temporariamente ligado à homepage;
-- nota profissional e links legais.
+Footer minimalista com assinatura da marca, contactos, redes sociais, avaliações, loja afiliada e ligações legais.
 
 ## Deploy
 
