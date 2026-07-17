@@ -58,3 +58,21 @@ function ips_twentytwentyfive_child_enqueue_leveza_app_assets(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_leveza_app_assets', 30 );
+
+/**
+ * Carrega os ajustes de layout da página Leveza com Estrutura.
+ * O ficheiro é carregado depois do CSS principal para funcionar como camada de refinamento.
+ */
+function ips_twentytwentyfive_child_enqueue_leveza_layout_assets(): void {
+	$relative_path = '/assets/css/leveza-app-layout.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-twentytwentyfive-child-leveza-layout',
+		get_stylesheet_directory_uri() . $relative_path,
+		array( 'ips-twentytwentyfive-child-leveza-app' ),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_leveza_layout_assets', 40 );
