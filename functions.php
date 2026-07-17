@@ -39,3 +39,22 @@ function ips_twentytwentyfive_child_enqueue_home_assets(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_home_assets', 20 );
+
+/**
+ * Carrega os estilos da página pública da app e das páginas legais.
+ * As regras estão limitadas às classes .ips-app-page e .ips-legal-page,
+ * permitindo que os padrões sejam editados no Gutenberg sem afetar outras páginas.
+ */
+function ips_twentytwentyfive_child_enqueue_leveza_app_assets(): void {
+	$relative_path = '/assets/css/leveza-app.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-twentytwentyfive-child-leveza-app',
+		get_stylesheet_directory_uri() . $relative_path,
+		array( 'ips-twentytwentyfive-child-style' ),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_leveza_app_assets', 30 );
