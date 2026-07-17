@@ -1,0 +1,118 @@
+/*
+ * Ajustes de layout da página Leveza com Estrutura.
+ * Carregado depois de leveza-app.css para preservar o design-base.
+ */
+
+/* Remove o título automático e o espaço superior do template apenas nesta página. */
+body:has(.ips-app-page) .wp-block-post-title {
+  display: none !important;
+}
+
+body:has(.ips-app-page) .wp-block-post-content {
+  margin-block-start: 0 !important;
+}
+
+body:has(.ips-app-page) .wp-site-blocks > main,
+body:has(.ips-app-page) .wp-site-blocks > .wp-block-group:has(.wp-block-post-content .ips-app-page) {
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
+
+/*
+ * Uniformiza os quatro benefícios numa grelha 2 × 2.
+ * display: contents permite aproveitar os blocos Gutenberg já inseridos,
+ * sem obrigar a recriar a página.
+ */
+.ips-app-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 600px));
+  grid-template-rows: auto repeat(2, minmax(290px, auto));
+  gap: 22px;
+  justify-content: center;
+}
+
+.ips-app-features > .ips-app-section__intro {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+}
+
+.ips-app-features > .ips-app-feature-grid,
+.ips-app-feature-grid > .wp-block-column {
+  display: contents !important;
+}
+
+.ips-app-feature-grid > .wp-block-column:first-child > .ips-app-feature {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.ips-app-feature-grid > .wp-block-column:last-child > .ips-app-feature:first-child {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.ips-app-feature-grid > .wp-block-column:last-child > .ips-app-feature:last-child {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.ips-app-features > .ips-app-feature--wide {
+  grid-column: 2;
+  grid-row: 3;
+  max-width: none;
+  width: auto;
+  margin: 0;
+}
+
+.ips-app-features .ips-app-feature {
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.ips-app-feature--wide {
+  align-items: stretch !important;
+  background: #fff;
+}
+
+.ips-app-feature--wide > .wp-block-group {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+
+.ips-app-feature--wide .ips-app-next-step {
+  max-width: none;
+  width: 100%;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+/* A escala era decorativa e fazia o primeiro cartão parecer interativo. */
+.ips-app-scale {
+  display: none !important;
+}
+
+@media (max-width: 782px) {
+  .ips-app-features {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 18px;
+  }
+
+  .ips-app-features > .ips-app-section__intro,
+  .ips-app-feature-grid > .wp-block-column:first-child > .ips-app-feature,
+  .ips-app-feature-grid > .wp-block-column:last-child > .ips-app-feature:first-child,
+  .ips-app-feature-grid > .wp-block-column:last-child > .ips-app-feature:last-child,
+  .ips-app-features > .ips-app-feature--wide {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  .ips-app-features .ips-app-feature {
+    min-height: 0;
+  }
+}
