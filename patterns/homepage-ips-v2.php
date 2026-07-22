@@ -31,7 +31,7 @@
         <div class="wp-block-button ips-home-v2__button"><a class="wp-block-button__link wp-element-button" href="https://inespinhosantos.pt/marcar-consulta/">Marcar consulta</a></div>
         <!-- /wp:button -->
         <!-- wp:button {"className":"is-style-outline ips-home-v2__button ips-home-v2__button--secondary"} -->
-        <div class="wp-block-button is-style-outline ips-home-v2__button ips-home-v2__button--secondary"><a class="wp-block-button__link wp-element-button" href="#ips-home-sobre">Conhecer a Inês</a></div>
+        <div class="wp-block-button is-style-outline ips-home-v2__button ips-home-v2__button--secondary"><a class="wp-block-button__link wp-element-button" href="#">Conhecer a Inês</a></div>
         <!-- /wp:button -->
       </div>
       <!-- /wp:buttons -->
@@ -82,13 +82,13 @@
     <!-- /wp:column -->
     <!-- wp:column {"verticalAlignment":"center","width":"56%"} -->
     <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:56%">
-      <!-- wp:group {"className":"ips-home-v2__pillars","layout":{"type":"flex","flexWrap":"wrap"}} -->
+      <!-- wp:group {"className":"ips-home-v2__pillars","layout":{"type":"default"}} -->
       <div class="wp-block-group ips-home-v2__pillars">
-        <!-- wp:paragraph --><p><strong>Estrutura</strong><br>menos improviso</p><!-- /wp:paragraph -->
-        <!-- wp:paragraph --><p><strong>Saciedade</strong><br>menos fome acumulada</p><!-- /wp:paragraph -->
-        <!-- wp:paragraph --><p><strong>Flexibilidade</strong><br>espaço para a vida real</p><!-- /wp:paragraph -->
-        <!-- wp:paragraph --><p><strong>Consistência</strong><br>continuidade sem perfeição</p><!-- /wp:paragraph -->
-        <!-- wp:paragraph --><p><strong>Autonomia</strong><br>mais confiança nas decisões</p><!-- /wp:paragraph -->
+        <!-- wp:group {"className":"ips-home-v2__pillar","layout":{"type":"constrained"}} --><div class="wp-block-group ips-home-v2__pillar"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Estrutura</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Menos improviso.</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+        <!-- wp:group {"className":"ips-home-v2__pillar","layout":{"type":"constrained"}} --><div class="wp-block-group ips-home-v2__pillar"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Saciedade</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Menos fome acumulada.</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+        <!-- wp:group {"className":"ips-home-v2__pillar","layout":{"type":"constrained"}} --><div class="wp-block-group ips-home-v2__pillar"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Flexibilidade</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Espaço para a vida real.</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+        <!-- wp:group {"className":"ips-home-v2__pillar","layout":{"type":"constrained"}} --><div class="wp-block-group ips-home-v2__pillar"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Consistência</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Continuidade sem perfeição.</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+        <!-- wp:group {"className":"ips-home-v2__pillar","layout":{"type":"constrained"}} --><div class="wp-block-group ips-home-v2__pillar"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Autonomia</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Mais confiança nas decisões.</p><!-- /wp:paragraph --></div><!-- /wp:group -->
       </div>
       <!-- /wp:group -->
     </div>
