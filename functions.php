@@ -76,3 +76,21 @@ function ips_twentytwentyfive_child_enqueue_leveza_layout_assets(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_leveza_layout_assets', 40 );
+
+/**
+ * Carrega os estilos da Homepage IPS v2.
+ * Todas as regras estão limitadas à classe .ips-home-v2.
+ */
+function ips_twentytwentyfive_child_enqueue_home_v2(): void {
+	$relative_path = '/assets/css/home-v2.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-home-v2',
+		get_stylesheet_directory_uri() . $relative_path,
+		array(),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_home_v2', 50 );
