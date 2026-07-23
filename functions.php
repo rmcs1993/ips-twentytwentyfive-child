@@ -94,3 +94,21 @@ function ips_twentytwentyfive_child_enqueue_home_v2(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_home_v2', 50 );
+
+/**
+ * Carrega os estilos da página Contactos IPS.
+ * Todas as regras estão limitadas à classe .ips-contact-page.
+ */
+function ips_twentytwentyfive_child_enqueue_contact_page(): void {
+	$relative_path = '/assets/css/contactos-v1.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-contact-page',
+		get_stylesheet_directory_uri() . $relative_path,
+		array(),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_contact_page', 60 );
