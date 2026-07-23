@@ -113,16 +113,9 @@
     <!-- /wp:column -->
     <!-- wp:column {"width":"62%"} -->
     <div class="wp-block-column" style="flex-basis:62%">
-      <!-- wp:group {"className":"ips-contact-page__form-placeholder","layout":{"type":"constrained"}} -->
-      <div class="wp-block-group ips-contact-page__form-placeholder">
-        <!-- wp:heading {"level":3} -->
-        <h3 class="wp-block-heading">Inserir aqui o formulário de contacto existente</h3>
-        <!-- /wp:heading -->
-        <!-- wp:paragraph -->
-        <p>Substitui este bloco pelo formulário já utilizado no WordPress, mantendo os campos Nome, Email, Telefone opcional, Assunto, Mensagem e consentimento de privacidade.</p>
-        <!-- /wp:paragraph -->
-      </div>
-      <!-- /wp:group -->
+      <!-- wp:shortcode -->
+      [ips_contact_form]
+      <!-- /wp:shortcode -->
     </div>
     <!-- /wp:column -->
   </div>

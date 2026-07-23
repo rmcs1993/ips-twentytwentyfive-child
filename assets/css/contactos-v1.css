@@ -17,7 +17,25 @@ body:has(.ips-contact-page) .wp-site-blocks>main{margin-block-start:0!important;
 .ips-contact-page .ips-contact-page__details a{color:var(--ips-contact-ink);text-decoration-thickness:1px;text-underline-offset:3px}
 .ips-contact-page .ips-contact-page__map-card{overflow:hidden;min-height:520px}
 .ips-contact-page .ips-contact-page__map{display:block;width:100%;min-height:520px;height:100%;border:0}
-.ips-contact-page .ips-contact-page__form-placeholder{min-height:420px;padding:clamp(28px,4vw,48px);border:1px dashed rgba(29,42,43,.25);border-radius:28px;background:#faf9f6}
+.ips-contact-page .ips-contact-page__form{padding:clamp(28px,4vw,48px);border-radius:28px;background:#faf9f6;box-shadow:0 14px 40px rgba(29,42,43,.06)}
+.ips-contact-page .ips-contact-page__form-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ips-contact-page .ips-contact-page__form-field{display:flex;flex-direction:column;gap:8px}
+.ips-contact-page .ips-contact-page__form-field--wide{grid-column:1/-1}
+.ips-contact-page .ips-contact-page__form-label{font-weight:700}
+.ips-contact-page .ips-contact-page__form-required{color:var(--ips-contact-accent)}
+.ips-contact-page .ips-contact-page__form input[type="text"],.ips-contact-page .ips-contact-page__form input[type="email"],.ips-contact-page .ips-contact-page__form input[type="tel"],.ips-contact-page .ips-contact-page__form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(29,42,43,.3);border-radius:14px;background:var(--ips-contact-white);color:var(--ips-contact-ink);font:inherit;padding:13px 15px}
+.ips-contact-page .ips-contact-page__form textarea{min-height:180px;resize:vertical}
+.ips-contact-page .ips-contact-page__form input:focus-visible,.ips-contact-page .ips-contact-page__form textarea:focus-visible,.ips-contact-page .ips-contact-page__form button:focus-visible,.ips-contact-page .ips-contact-page__form a:focus-visible{outline:3px solid var(--ips-contact-accent);outline-offset:3px}
+.ips-contact-page .ips-contact-page__form-consent{display:flex;align-items:flex-start;gap:12px;margin:24px 0}
+.ips-contact-page .ips-contact-page__form-consent input{flex:0 0 auto;width:20px;height:20px;margin-top:3px;accent-color:var(--ips-contact-accent)}
+.ips-contact-page .ips-contact-page__form-consent label{line-height:1.5}
+.ips-contact-page .ips-contact-page__form-consent a{color:var(--ips-contact-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.ips-contact-page .ips-contact-page__form-submit{border:0;border-radius:999px;background:var(--ips-contact-accent);color:var(--ips-contact-white);cursor:pointer;font:inherit;font-weight:700;padding:14px 24px}
+.ips-contact-page .ips-contact-page__form-submit:hover{filter:brightness(.94)}
+.ips-contact-page .ips-contact-page__form-notice{margin:0 0 24px;padding:16px 18px;border-radius:14px;font-weight:600}
+.ips-contact-page .ips-contact-page__form-notice--success{background:#e6efe8;color:#183c25}
+.ips-contact-page .ips-contact-page__form-notice--error{background:#f7e8e5;color:#6a251d}
+.ips-contact-page .ips-contact-page__website-field{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
 .ips-contact-page .ips-contact-page__button .wp-block-button__link{border-radius:999px;padding:14px 24px;font-weight:700}
 .ips-contact-page .ips-contact-page__button:not(.is-style-outline) .wp-block-button__link{background:var(--ips-contact-accent);color:var(--ips-contact-white)}
 .ips-contact-page .ips-contact-page__button--secondary .wp-block-button__link{border-color:var(--ips-contact-ink);color:var(--ips-contact-ink)}
@@ -30,5 +48,7 @@ body:has(.ips-contact-page) .wp-site-blocks>main{margin-block-start:0!important;
   .ips-contact-page .ips-contact-page__section{padding:48px 20px}
   .ips-contact-page .ips-contact-page__grid,.ips-contact-page .ips-contact-page__form-layout{display:grid!important;grid-template-columns:1fr}
   .ips-contact-page .ips-contact-page__map-card,.ips-contact-page .ips-contact-page__map{min-height:360px}
-  .ips-contact-page .ips-contact-page__form-placeholder{min-height:300px}
+  .ips-contact-page .ips-contact-page__form-fields{grid-template-columns:1fr}
+  .ips-contact-page .ips-contact-page__form-field--wide{grid-column:auto}
+  .ips-contact-page .ips-contact-page__form-submit{width:100%}
 }
