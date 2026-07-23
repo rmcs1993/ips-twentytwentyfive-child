@@ -130,3 +130,21 @@ function ips_twentytwentyfive_child_enqueue_about_page(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_about_page', 70 );
+
+/**
+ * Carrega os estilos das páginas legais IPS v1.
+ * As regras são ativadas apenas dentro da classe .ips-legal-page.
+ */
+function ips_twentytwentyfive_child_enqueue_legal_pages_v1(): void {
+	$relative_path = '/assets/css/legal-pages-v1.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-legal-pages-v1',
+		get_stylesheet_directory_uri() . $relative_path,
+		array(),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_legal_pages_v1', 80 );
