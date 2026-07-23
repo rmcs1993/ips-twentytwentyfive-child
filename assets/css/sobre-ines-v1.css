@@ -1,0 +1,283 @@
+/* Página Sobre IPS v1 */
+.ips-about-page {
+	--ips-about-ink: #1d2a2b;
+	--ips-about-accent: #a56f3a;
+	--ips-about-warm: #f5f0e8;
+	--ips-about-soft: #e9efea;
+	--ips-about-white: #fff;
+	--ips-about-radius: 28px;
+	color: var(--ips-about-ink);
+}
+
+.ips-about-page .ips-about-page__hero,
+.ips-about-page .ips-about-page__section {
+	box-sizing: border-box;
+	padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 48px);
+}
+
+.ips-about-page .ips-about-page__hero {
+	padding-top: clamp(44px, 6vw, 76px);
+	padding-bottom: clamp(52px, 7vw, 92px);
+}
+
+.ips-about-page .ips-about-page__hero-grid,
+.ips-about-page .ips-about-page__story-grid,
+.ips-about-page .ips-about-page__approach {
+	gap: clamp(36px, 6vw, 84px);
+}
+
+.ips-about-page .ips-about-page__eyebrow {
+	margin: 0 0 14px;
+	color: var(--ips-about-accent);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.ips-about-page .ips-about-page__title,
+.ips-about-page .ips-about-page__section-title,
+.ips-about-page .ips-about-page__card h3 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+.ips-about-page .ips-about-page__title {
+	max-width: 760px;
+	margin: 0;
+	font-size: clamp(3rem, 5.7vw, 5.9rem);
+	line-height: 0.98;
+	letter-spacing: -0.05em;
+}
+
+.ips-about-page .ips-about-page__lead {
+	max-width: 680px;
+	margin: 24px 0 0;
+	font-size: clamp(1.08rem, 1.4vw, 1.25rem);
+	line-height: 1.7;
+}
+
+.ips-about-page .ips-about-page__photo-placeholder {
+	display: grid;
+	box-sizing: border-box;
+	place-items: center;
+	min-height: 480px;
+	padding: 28px;
+	border: 1px dashed rgba(29, 42, 43, 0.24);
+	border-radius: var(--ips-about-radius);
+	background: linear-gradient(145deg, #eadfd2, #dfe9df);
+	color: rgba(29, 42, 43, 0.68);
+	text-align: center;
+}
+
+.ips-about-page .ips-about-page__photo-placeholder p {
+	max-width: 220px;
+	margin: 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+
+.ips-about-page .ips-about-page__photo-placeholder--hero {
+	min-height: 520px;
+}
+
+.ips-about-page .ips-about-page__photo-placeholder--story {
+	min-height: 620px;
+	background: linear-gradient(155deg, #e4eadf, #e9ded2);
+}
+
+.ips-about-page .ips-about-page__section--warm {
+	background: var(--ips-about-warm);
+}
+
+.ips-about-page .ips-about-page__section--soft {
+	background: var(--ips-about-soft);
+}
+
+.ips-about-page .ips-about-page__section-title {
+	margin-top: 0;
+	font-size: clamp(2.2rem, 4vw, 4.1rem);
+	line-height: 1.08;
+	letter-spacing: -0.035em;
+}
+
+.ips-about-page .ips-about-page__story-copy > p,
+.ips-about-page .ips-about-page__approach-copy > p {
+	font-size: 1.05rem;
+	line-height: 1.75;
+}
+
+.ips-about-page .ips-about-page__story-copy > p:first-of-type {
+	font-size: 1.16rem;
+	font-weight: 600;
+}
+
+.ips-about-page .ips-about-page__signature {
+	margin-top: 32px;
+	padding-top: 24px;
+	border-top: 1px solid rgba(29, 42, 43, 0.16);
+}
+
+.ips-about-page .ips-about-page__signature p {
+	margin: 0;
+	line-height: 1.65;
+}
+
+.ips-about-page .ips-about-page__quote {
+	margin: 32px 0 0;
+	padding: 24px 28px;
+	border: 0;
+	border-left: 4px solid var(--ips-about-accent);
+	border-radius: 0 20px 20px 0;
+	background: rgba(255, 255, 255, 0.72);
+}
+
+.ips-about-page .ips-about-page__quote p {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(1.3rem, 2vw, 1.75rem);
+	font-style: normal;
+	line-height: 1.45;
+}
+
+.ips-about-page .ips-about-page__approach {
+	padding: clamp(32px, 5vw, 64px);
+	border-radius: var(--ips-about-radius);
+	background: var(--ips-about-white);
+	box-shadow: 0 14px 44px rgba(29, 42, 43, 0.06);
+}
+
+.ips-about-page .ips-about-page__approach-copy {
+	padding-left: clamp(0px, 3vw, 36px);
+	border-left: 1px solid rgba(29, 42, 43, 0.14);
+}
+
+.ips-about-page .ips-about-page__section-heading {
+	max-width: 850px;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.ips-about-page .ips-about-page__principles {
+	gap: 24px;
+}
+
+.ips-about-page .ips-about-page__card {
+	box-sizing: border-box;
+	height: 100%;
+	min-height: 220px;
+	padding: 30px;
+	border-radius: 24px;
+	background: var(--ips-about-white);
+	box-shadow: 0 12px 36px rgba(29, 42, 43, 0.06);
+}
+
+.ips-about-page .ips-about-page__card h3 {
+	margin: 0 0 14px;
+	color: var(--ips-about-accent);
+	font-size: 1.75rem;
+}
+
+.ips-about-page .ips-about-page__card p {
+	margin-bottom: 0;
+	line-height: 1.7;
+}
+
+.ips-about-page .ips-about-page__section--professional {
+	background: #faf9f6;
+}
+
+.ips-about-page .ips-about-page__professional-card {
+	box-sizing: border-box;
+	max-width: 980px;
+	padding: clamp(32px, 5vw, 56px);
+	border: 1px solid rgba(29, 42, 43, 0.1);
+	border-radius: var(--ips-about-radius);
+	background: var(--ips-about-white);
+}
+
+.ips-about-page .ips-about-page__professional-grid {
+	gap: 28px;
+	margin: 28px 0 30px;
+}
+
+.ips-about-page .ips-about-page__professional-grid p {
+	margin: 0;
+	font-size: 1.04rem;
+	line-height: 1.75;
+}
+
+.ips-about-page .ips-about-page__button .wp-block-button__link {
+	padding: 11px 20px;
+	border-color: var(--ips-about-accent);
+	border-radius: 999px;
+	color: var(--ips-about-accent);
+	font-size: 0.95rem;
+	font-weight: 700;
+}
+
+.ips-about-page .ips-about-page__button .wp-block-button__link:hover {
+	background: var(--ips-about-accent);
+	color: var(--ips-about-white);
+}
+
+.ips-about-page .ips-about-page__button .wp-block-button__link:focus-visible {
+	outline: 3px solid rgba(165, 111, 58, 0.35);
+	outline-offset: 3px;
+}
+
+@media (max-width: 781px) {
+	.ips-about-page .ips-about-page__hero,
+	.ips-about-page .ips-about-page__section {
+		padding: 48px 20px;
+	}
+
+	.ips-about-page .ips-about-page__hero {
+		padding-top: 36px;
+	}
+
+	.ips-about-page .ips-about-page__hero-grid,
+	.ips-about-page .ips-about-page__story-grid,
+	.ips-about-page .ips-about-page__approach,
+	.ips-about-page .ips-about-page__principles,
+	.ips-about-page .ips-about-page__professional-grid {
+		display: grid !important;
+		grid-template-columns: 1fr;
+	}
+
+	.ips-about-page .ips-about-page__title {
+		font-size: clamp(2.65rem, 12vw, 4rem);
+		overflow-wrap: normal;
+		word-break: normal;
+	}
+
+	.ips-about-page .ips-about-page__photo-placeholder--hero {
+		min-height: 420px;
+	}
+
+	.ips-about-page .ips-about-page__photo-placeholder--story {
+		min-height: 440px;
+	}
+
+	.ips-about-page .ips-about-page__story-media {
+		order: 2;
+	}
+
+	.ips-about-page .ips-about-page__story-copy {
+		order: 1;
+	}
+
+	.ips-about-page .ips-about-page__approach {
+		padding: 30px 24px;
+	}
+
+	.ips-about-page .ips-about-page__approach-copy {
+		padding: 24px 0 0;
+		border-top: 1px solid rgba(29, 42, 43, 0.14);
+		border-left: 0;
+	}
+
+	.ips-about-page .ips-about-page__card {
+		min-height: 0;
+	}
+}

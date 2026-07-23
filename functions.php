@@ -112,3 +112,21 @@ function ips_twentytwentyfive_child_enqueue_contact_page(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_contact_page', 60 );
+
+/**
+ * Carrega os estilos da página Sobre IPS.
+ * Todas as regras estão limitadas à classe .ips-about-page.
+ */
+function ips_twentytwentyfive_child_enqueue_about_page(): void {
+	$relative_path = '/assets/css/sobre-ines-v1.css';
+	$absolute_path = get_stylesheet_directory() . $relative_path;
+	$version       = file_exists( $absolute_path ) ? (string) filemtime( $absolute_path ) : wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style(
+		'ips-about-page',
+		get_stylesheet_directory_uri() . $relative_path,
+		array(),
+		$version
+	);
+}
+add_action( 'enqueue_block_assets', 'ips_twentytwentyfive_child_enqueue_about_page', 70 );
